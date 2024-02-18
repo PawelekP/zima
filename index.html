@@ -30,6 +30,19 @@
         localStorage.setItem('visits', counter);
 
         document.getElementById('visits').innerText = counter;
-    </script>
+    
+    function createSnowflake() {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.style.left = `${Math.random() * 100}vw`;
+  snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+  snowflake.innerText = "❄️";
+  document.body.appendChild(snowflake);
+
+    snowflake.addEventListener("animationend", () => {
+    snowflake.remove();
+  });
+    setInterval(createSnowflake, 1000);
+</script>
 </body>
 </html>
