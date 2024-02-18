@@ -5,6 +5,16 @@ body {
     background-color: #87CEEB;
 }
 
+.snowflake {
+            position: fixed;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            user-select: none;
+            z-index: 9999;
+            animation: fall linear infinite;
+}
+
 
 .content {
     position: relative;
