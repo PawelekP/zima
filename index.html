@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zima</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #3366cc;
+        }
+        p {
+            color: #333;
+        }
+        #counter {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>Witaj na stronie o zimie!</h1>
+    <p>Zima to magiczna pora roku, kiedy ziemia przykrywana jest białym puchem śniegu.</p>
+    
+    <p>Na tej stronie możesz podziwiać uroki zimy i delektować się pięknem mroźnej natury.</p>
+    
+    <p>Aby dowiedzieć się, ile osób już odwiedziło tę stronę, sprawdź poniższy licznik:</p>
+    
+    <p id="counter">Liczba odwiedzin: <span id="visits">0</span></p>
+
+    <script>
+        // Skrypt licznika odwiedzin
+        let counter = 0;
+
+        // Sprawdzanie, czy w localStorage jest już zapisana liczba odwiedzin
+        if (localStorage.getItem('visits')) {
+            counter = parseInt(localStorage.getItem('visits'));
+        }
+
+        // Zwiększenie liczby odwiedzin o 1
+        counter++;
+        // Aktualizacja wartości w localStorage
+        localStorage.setItem('visits', counter);
+
+        // Wyświetlanie liczby odwiedzin na stronie
+        document.getElementById('visits').innerText = counter;
+    </script>
+</body>
+</html>
